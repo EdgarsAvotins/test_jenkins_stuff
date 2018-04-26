@@ -11,5 +11,5 @@ timestamps {
   echo 'hi'
   echo 'beginning'
   sh 'pwd'
-  sh 'adb logcat'
+  sh 'sh endless_script.sh'
 }
