@@ -8,6 +8,7 @@ properties([
     disableConcurrentBuilds()
 ])
 timestamps {
+  stage 'Everything'
   node('authy_node2') {
     checkout scm
     echo 'hi'
