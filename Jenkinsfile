@@ -8,9 +8,11 @@ properties([
     disableConcurrentBuilds()
 ])
 timestamps {
-  checkout scm
-  echo 'hi'
-  echo 'beginning'
-  sh 'pwd'
-  sh 'adb logcat'
+  node('authy_node2') {
+    checkout scm
+    echo 'hi'
+    echo 'beginning'
+    sh 'pwd'
+    sh 'adb logcat'
+  }
 }
