@@ -8,9 +8,12 @@ properties([
     disableConcurrentBuilds()
 ])
 timestamps {
-  checkout scm
-  echo 'hi'
-  echo 'beginning'
-  sh 'pwd'
-  sh 'sh endless_script.sh'
+  stage 'Everything'
+  node('authy_node2') {
+    checkout scm
+    echo 'hi'
+    echo 'beginning'
+    sh 'pwd'
+    sh 'sh endless_script.sh'
+  }
 }
