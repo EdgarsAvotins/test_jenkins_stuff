@@ -8,6 +8,7 @@ properties([
     disableConcurrentBuilds()
 ])
 timestamps {
+  checkout scm
   echo 'hi'
   echo 'beginning'
   sh 'pwd'
